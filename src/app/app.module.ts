@@ -10,7 +10,14 @@ import { PostsService } from './posts/posts.service';
 import { HeaderComponent } from './header/header.component';
 import { PostListComponent} from './posts/post-list/post-list.component';
 
-import { MatInputModule, MatButtonModule, MatCardModule, MatToolbarModule,  MatExpansionModule } from '@angular/material';
+import {
+  MatInputModule,
+  MatButtonModule,
+  MatCardModule,
+  MatToolbarModule,
+  MatExpansionModule,
+  MatProgressSpinnerModule } from '@angular/material';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -23,6 +30,7 @@ import { MatInputModule, MatButtonModule, MatCardModule, MatToolbarModule,  MatE
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
     MatInputModule,
@@ -30,7 +38,9 @@ import { MatInputModule, MatButtonModule, MatCardModule, MatToolbarModule,  MatE
     MatButtonModule,
     MatToolbarModule,
     MatExpansionModule,
-    HttpClientModule
+    MatProgressSpinnerModule,
+    HttpClientModule,
+
   ],
   providers: [ PostsService],
   bootstrap: [AppComponent]
